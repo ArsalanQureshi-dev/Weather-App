@@ -1,0 +1,159 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    padding: 20px;
+}
+
+/* Glassmorphism Card Container */
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.search-box input::placeholder {
+    color: #ddd;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.search-box button:hover {
+    transform: scale(1.1);
+}
+
+/* Error Message Styling */
+.error-message {
+    display: none;
+    background: rgba(255, 77, 77, 0.3);
+    border: 1px solid rgba(255, 77, 77, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* Weather Information Styling */
+#city-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#weather-condition {
+    font-size: 1rem;
+    color: #e0e0e0;
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Temperature & Unit Toggle */
+.temp-container {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+#temperature {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.unit-toggle button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.unit-toggle button.active {
+    color: #ffffff;
+    border-bottom: 2px solid #fff;
+}
+
+/* Details Grid Layout */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.detail-item i {
+    font-size: 1.5rem;
+}
+
+.detail-item .label {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.detail-item .value {
+    font-size: 1rem;
+    font-weight: 600;
+}
